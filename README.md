@@ -26,7 +26,7 @@ end`
 
 One of routes like that:
 
-`new_link_comment | GET | /links/:link_id/comments/new(.:format) | comments#new`
+`new_link_comment GET /links/:link_id/comments/new(.:format) comments#new`
 
 `edit_link_comment GET    /links/:link_id/comments/:id/edit(.:format) comments#edit`
 
