@@ -1,5 +1,13 @@
+## Overview
+- Sign up / Sign in & Out
+- Submit a link with a Title & URL
+- Vote up or down on a link
+- Comment on links submissions
+
+![alt text](http://i.imgur.com/WA2pnhx.png "Home")
+
 ## Some notes on this project
-### Memo of div_for
+### div_for
 
 Structure: `div_for(record, *args, &block)`
 Purposes:
@@ -10,14 +18,14 @@ Ex: `div_for(comment) do %>` -> `<div class="comment" id="comment_4">`
 
 Ex: `<%= render :partial => @link.comments %>` -> `<div class="comment" id="comment_4">...<div class="comment" id="comment_5">`
 
-### Memo of creating a new user, new link or new comment
+### Creating a new user, new link or new comment
 
 - Create a user `@user = User.new(user_params)`
 - Create a link: many-to-one relationship: for example, the rela of link and user
 `@link = current_user.links.build(link_params)`
 - Create a comment: `@comment = @link.comments.build(comment_params)`
 
-### Memo of routing
+### Routing
 - Nested route:
 
 `resources :links do
